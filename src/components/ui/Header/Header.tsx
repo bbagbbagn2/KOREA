@@ -1,7 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
+import styled, { css } from 'styled-components';
 
 export default function Header() {
+  const location = useLocation();
+  const isLocationsPage = location.pathname === '/locations';
+
   return (
     <header>
       <HeaderBox>
@@ -12,9 +16,13 @@ export default function Header() {
               <TextList>
                 <li>
                   <b>
-                    <Link href="/" role="button">
+                    <a
+                      href="/locations"
+                      role="button"
+                      className={isLocationsPage ? 'active-element' : ''}
+                    >
                       Locations
-                    </Link>
+                    </a>
                   </b>
                 </li>
               </TextList>
@@ -109,19 +117,33 @@ const TextList = styled.ul`
       color: #000;
       letter-spacing: 0;
       text-decoration: none;
-    }
-  }
-`;
 
-const Link = styled.a`
-  @media only screen and (min-width: 1200px) {
-    position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    color: #000;
-    letter-spacing: 0;
-    text-decoration: none;
-    cursor: pointer;
+      a {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: #000;
+        letter-spacing: 0;
+        text-decoration: none;
+        cursor: pointer;
+
+        &.active-element::before {
+          display: block;
+        }
+      }
+    }
+
+    > li a::before {
+      content: '';
+      position: absolute;
+      top: calc(100% - 7px);
+      left: 50%;
+      width: 100%;
+      height: 4px;
+      display: none;
+      background-color: #000;
+      translate: -50% 0;
+    }
   }
 `;
