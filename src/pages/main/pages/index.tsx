@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import FirstSection from './FirstSection';
 import CampaingnSection from './CampaignSection';
 import LocationSection from './LocationSection';
-import Header from '../../../components/Header/Header';
-import Footer from '../../../components/Footer/Footer';
+import Header from '@components/Header/Header';
+import Footer from '@components/Footer/Footer';
 
 export default function Main() {
   return (

@@ -1,4 +1,5 @@
 {
+    "extends": "./tsconfig.paths.json",
     "compilerOptions": {
         "target": "ESNext",
         "module": "ESNext",
@@ -8,11 +9,6 @@
         "forceConsistentCasingInFileNames": true,
         "moduleResolution": "node",
         "jsx": "react",
-        "baseUrl": "./src",
-        "paths": {
-            "@/*": ["*"],
-            "@_components": ["*/components"],
-        },
         "allowJs": true,
     },
     "include": ["src/**/*.tsx", "src/**/*.ts"],

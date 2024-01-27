@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FormContainer from '../components/form';
-import Button from '../../../components/ui/Button';
+import FormContainer from '@components/form/MainForm';
+import Button from '@components/ui/Button';
 
 export default function LocationSection() {
   return (
