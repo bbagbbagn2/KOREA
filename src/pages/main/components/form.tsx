@@ -1,9 +1,9 @@
-import React, { ReactNode } from "react";
-import styled from "styled-components";
+import React, { ReactNode } from 'react';
+import styled from 'styled-components';
 
 type FormContainerProps = {
-    children: ReactNode;
-}
+  children: ReactNode;
+};
 export default function FormContainer({ children }: FormContainerProps) {
   return <Container>{children}</Container>;
 }

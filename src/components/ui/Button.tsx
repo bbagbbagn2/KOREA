@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 export default function Button() {
   return (
     <ButtonBox href="#">
-        <span>자세히 보기</span>
+      <span>자세히 보기</span>
     </ButtonBox>
   );
 }
@@ -35,9 +35,9 @@ const ButtonBox = styled.a`
     width: 327px;
 
     &:hover {
-        background-color: transparent;
-        border-color: #6e6e6e;
-        color: #6e6e6e;
+      background-color: transparent;
+      border-color: #6e6e6e;
+      color: #6e6e6e;
     }
   }
 `;

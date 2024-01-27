@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import SeperatorProps from "../ui/Seperator";
+import SeperatorProps from '../ui/Seperator';
 export default function Footer() {
   return (
     <footer>
@@ -13,7 +13,7 @@ export default function Footer() {
             <PrivacyBox>
               <CmpTextBox>
                 <p>
-                    <b>© 2024 Jihun Park.</b>
+                  <b>© 2024 Jihun Park.</b>
                 </p>
               </CmpTextBox>
             </PrivacyBox>
@@ -77,7 +77,7 @@ const PrivacyBox = styled.div`
   p {
     margin: 16px 0 0;
   }
-  
+
   @media only screen and (min-width: 600px) {
     padding-inline: 12px;
     min-width: 100%;
@@ -94,7 +94,7 @@ const PrivacyBox = styled.div`
     flex-grow: 1;
 
     p {
-        margin-top: 24px;
+      margin-top: 24px;
     }
   }
 `;

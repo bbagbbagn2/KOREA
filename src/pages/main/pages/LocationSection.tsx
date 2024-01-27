@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import FormContainer from "../components/form";
-import Button from "../../../components/ui/Button";
+import FormContainer from '../components/form';
+import Button from '../../../components/ui/Button';
 
 export default function LocationSection() {
   return (
@@ -40,14 +40,14 @@ export default function LocationSection() {
                   <picture></picture>
                 </ImageLink>
               </AdapativeImage>
-            </LocationItem>{" "}
+            </LocationItem>{' '}
             <LocationItem>
               <AdapativeImage>
                 <ImageLink href="/">
                   <picture></picture>
                 </ImageLink>
               </AdapativeImage>
-            </LocationItem>{" "}
+            </LocationItem>{' '}
             <LocationItem>
               <AdapativeImage>
                 <ImageLink href="/">
@@ -120,7 +120,7 @@ const AdapativeImage = styled.div`
     background-color: #fafafa;
     border-radius: 16px;
     box-shadow: 0 14px 24px rgba(0, 0, 0, 0.06);
-    content: "";
+    content: '';
     display: block;
     inset: 0;
     position: absolute;

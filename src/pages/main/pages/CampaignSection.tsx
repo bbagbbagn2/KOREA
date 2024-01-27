@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-import FormContainer from "../components/form";
-import Button from "../../../components/ui/Button";
+import FormContainer from '../components/form';
+import Button from '../../../components/ui/Button';
 
 export default function CampaingnSection() {
   return (
@@ -69,7 +69,7 @@ const ContentBox = styled.div`
   }
 
   ::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     border-radius: 16px;
