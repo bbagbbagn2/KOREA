@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import FirstSection from './FirstSection';
 import CampaingnSection from './CampaignSection';
 import LocationSection from './LocationSection';
-import Header from '@components/form/Header/Header';
-import Footer from '@components/form/Footer/Footer';
+import Header from '@components/ui/Header/Header';
+import Footer from '@components/ui/Footer/Footer';
 
 export default function Main() {
   return (
