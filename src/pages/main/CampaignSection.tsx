@@ -14,7 +14,7 @@ export default function CampaingnSection() {
               <h3>제목을 입력해주세요</h3>
               <p>내용 내용 내용</p>
               <ButtonBox>
-                <Button />
+                <Button href='/' buttonText='자세히 보기'/>
               </ButtonBox>
             </ContentBox>
             <ImageBox></ImageBox>

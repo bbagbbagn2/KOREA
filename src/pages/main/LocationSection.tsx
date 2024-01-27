@@ -3,6 +3,13 @@ import styled from 'styled-components';
 
 import FormContainer from '@components/form/MainForm';
 import Button from '@components/ui/Button';
+import locationData from '../../data/data';
+
+type Location = {
+  name: string;
+  siteName: string | null;
+  image: string | null;
+};
 
 export default function LocationSection() {
   return (
@@ -13,52 +20,23 @@ export default function LocationSection() {
         </div>
         <LocationContainer>
           <LocationBox>
-            <LocationItem>
-              <AdapativeImage>
-                <ImageLink href="/">
-                  <picture></picture>
-                </ImageLink>
-              </AdapativeImage>
-            </LocationItem>
-            <LocationItem>
-              <AdapativeImage>
-                <ImageLink href="/">
-                  <picture></picture>
-                </ImageLink>
-              </AdapativeImage>
-            </LocationItem>
-            <LocationItem>
-              <AdapativeImage>
-                <ImageLink href="/">
-                  <picture></picture>
-                </ImageLink>
-              </AdapativeImage>
-            </LocationItem>
-            <LocationItem>
-              <AdapativeImage>
-                <ImageLink href="/">
-                  <picture></picture>
-                </ImageLink>
-              </AdapativeImage>
-            </LocationItem>{' '}
-            <LocationItem>
-              <AdapativeImage>
-                <ImageLink href="/">
-                  <picture></picture>
-                </ImageLink>
-              </AdapativeImage>
-            </LocationItem>{' '}
-            <LocationItem>
-              <AdapativeImage>
-                <ImageLink href="/">
-                  <picture></picture>
-                </ImageLink>
-              </AdapativeImage>
-            </LocationItem>
+            {locationData.map((location: Location, index: number) => (
+              <LocationItem key={index}>
+                <AdapativeImage>
+                  <ImageLink href="/">
+                    <picture>
+                      {location.image && (
+                        <img src={location.image} alt={location.name} />
+                      )}
+                    </picture>
+                  </ImageLink>
+                </AdapativeImage>
+              </LocationItem>
+            ))}
           </LocationBox>
         </LocationContainer>
         <ButtonContainer>
-          <Button />
+          <Button href="/locations" buttonText="모두 보기" />
         </ButtonContainer>
       </div>
     </FormContainer>
@@ -116,7 +94,7 @@ const AdapativeImage = styled.div`
   width: 100%;
   height: 0;
 
-  ::before {
+  &::before {
     background-color: #fafafa;
     border-radius: 16px;
     box-shadow: 0 14px 24px rgba(0, 0, 0, 0.06);
@@ -128,7 +106,7 @@ const AdapativeImage = styled.div`
   }
 
   @media only screen and (min-width: 1200px) {
-    :hover::before {
+    &:hover::before {
       inset: -8px;
       box-shadow: 0 14px 24px 0 rgba(0, 0, 0, 0.1);
     }
@@ -150,6 +128,15 @@ const ImageLink = styled.a`
     align-items: center;
     justify-content: center;
     background: none;
+
+    img {
+      width: auto;
+      height: 100%;
+      display: block;
+      border-style: none;
+      transition: none;
+      opacity: 1;
+    }
   }
 `;
 

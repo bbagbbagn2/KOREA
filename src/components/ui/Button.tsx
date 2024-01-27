@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Button() {
+type ButtonProps = {
+  href?: string;
+  buttonText ?: string;
+}
+export default function Button({ href, buttonText }: ButtonProps) {
   return (
-    <ButtonBox href="#">
-      <span>자세히 보기</span>
+    <ButtonBox href={href}>
+      <span>{buttonText}</span>
     </ButtonBox>
   );
 }
