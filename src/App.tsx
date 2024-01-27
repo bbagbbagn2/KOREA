@@ -6,9 +6,9 @@ import Main from './pages/main/pages';
 
 function App() {
   return (
-    <>
-      <Main />
-    </>
+    <Routes>
+      <Route path="/" element={<Main />} />
+    </Routes>
   );
 }
 
