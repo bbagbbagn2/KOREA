@@ -20,7 +20,7 @@ export default function LocationSection() {
         <Title titleProps="브랜드 살펴보기" marginTop='64px' />
         <LocationContainer>
           <LocationBox>
-            {locationData.map((location: Location, index: number) => (
+            {locationData.slice(0, 6).map((location: Location, index: number) => (
               <LocationItem key={index}>
                 <AdapativeImage>
                   <ImageLink href="/">
@@ -60,6 +60,8 @@ const LocationBox = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   list-style: none;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
 
   @media only screen and (min-width: 1200px) {
     margin-inline: auto;

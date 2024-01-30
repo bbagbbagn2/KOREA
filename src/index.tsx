@@ -11,12 +11,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
+    -webkit-text-size-adjust: 100%;
     line-height: 1.15;
   }
 
   body {
     background: #f1f1f1;
     direction: 1tr;
+    -webkit-font-smoothing: antialiased;
   }
 
   body, html {

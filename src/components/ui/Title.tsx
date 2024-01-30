@@ -9,7 +9,7 @@ type TitleProps = {
 export default function Title({ titleProps, marginTop }: TitleProps) {
   return (
     <div className="title">
-      <Heading marginTop={marginTop}>{titleProps}</Heading>;
+      <Heading marginTop={marginTop}>{titleProps}</Heading>
     </div>
   );
 }
