@@ -82,6 +82,12 @@ const GlobalStyle = createGlobalStyle`
     overflow: visible;
   }
 
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto 1280 / 1024;
+  }
+
   @media only screen and (min-width: 1200px) {
       ul {
         font-size: 16px;

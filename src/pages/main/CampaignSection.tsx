@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import FormContainer from '@components/form/MainForm';
 import Button from '@components/ui/Button';
 
+import campaign from '@assets/images/campaign.jpg';
+
 export default function CampaingnSection() {
   return (
     <FormContainer>
@@ -14,10 +16,16 @@ export default function CampaingnSection() {
               <h3>제목을 입력해주세요</h3>
               <p>내용 내용 내용</p>
               <ButtonBox>
-                <Button href='/' buttonText='자세히 보기'/>
+                <Button href="/" buttonText="자세히 보기" />
               </ButtonBox>
             </ContentBox>
-            <ImageBox></ImageBox>
+            <ImageBox>
+              <div>
+                <picture>
+                  <img src={campaign} alt="클라우드 보기" />
+                </picture>
+              </div>
+            </ImageBox>
           </CampaignBox>
         </CampaignContainer>
       </div>
@@ -110,6 +118,19 @@ const ImageBox = styled.div`
   position: relative;
   width: calc(100vw - 17px);
 
+  picture {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      display: block;
+      opacity: 1;
+    }
+  }
+
   @media only screen and (min-width: 1200px) {
     margin-top: 80px;
     margin-left: unset;
@@ -118,5 +139,10 @@ const ImageBox = styled.div`
     right: 8.33333%;
     min-width: 58.33333%;
     flex: 0 0 58.33333%;
+
+    picture {
+    border-radius: 16px;
+    overflow: hidden;
+  }
   }
 `;

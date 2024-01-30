@@ -1,33 +1,33 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
-    name: '서울특별시',
+    name: 'starbucks',
     siteName: null,
-    image: require('@assets/images/서울특별시.png'),
+    image: require('@assets/images/starbucks.png'),
   },
   {
-    name: '부산광역시',
+    name: 'mega-coffee',
     siteName: null,
-    image: require('@assets/images/부산광역시.png'),
+    image: require('@assets/images/mega.png'),
   },
   {
-    name: '광주광역시',
+    name: 'a twosome place coffee',
     siteName: null,
-    image: require('@assets/images/광주광역시.png'),
+    image: require('@assets/images/twosome.png'),
   },
   {
-    name: '대전광역시',
+    name: 'compose coffee',
     siteName: null,
-    image: require('@assets/images/대전광역시.gif'),
+    image: require('@assets/images/compose.png'),
   },
   {
-    name: ' 경상남도',
+    name: 'paik cafe',
     siteName: null,
-    image: require('@assets/images/경상남도.gif'),
+    image: require('@assets/images/paik.png'),
   },
   {
-    name: '전라남도',
+    name: 'ediya coffee',
     siteName: null,
-    image: require('@assets/images/전라남도.JPG'),
+    image: require('@assets/images/ediya.png'),
   },
 ];

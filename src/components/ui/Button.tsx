@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 type ButtonProps = {
   href?: string;
-  buttonText ?: string;
-}
+  buttonText?: string;
+};
+
 export default function Button({ href, buttonText }: ButtonProps) {
   return (
     <ButtonBox href={href}>

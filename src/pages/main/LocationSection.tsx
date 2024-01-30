@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 import FormContainer from '@components/form/MainForm';
 import Button from '@components/ui/Button';
-import locationData from '../../data/data';
+import Title from '@components/ui/Title';
+
+import locationData from '@data/data';
 
 type Location = {
   name: string;
@@ -15,9 +17,7 @@ export default function LocationSection() {
   return (
     <FormContainer>
       <div>
-        <div className="heading">
-          <Heading>지역 살펴보기</Heading>
-        </div>
+        <Title titleProps="브랜드 살펴보기" marginTop='64px' />
         <LocationContainer>
           <LocationBox>
             {locationData.map((location: Location, index: number) => (
@@ -36,7 +36,7 @@ export default function LocationSection() {
           </LocationBox>
         </LocationContainer>
         <ButtonContainer>
-          <Button href="/locations" buttonText="모두 보기" />
+          <Button href="/brands" buttonText="모두 보기" />
         </ButtonContainer>
       </div>
     </FormContainer>
@@ -130,8 +130,8 @@ const ImageLink = styled.a`
     background: none;
 
     img {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
       display: block;
       border-style: none;
       transition: none;
