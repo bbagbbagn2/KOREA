@@ -43,16 +43,6 @@ export default function LocationSection() {
   );
 }
 
-const Heading = styled.h1`
-  margin-top: 56px;
-  margin-bottom: 0;
-  text-align: center;
-
-  @media only screen and (min-width: 1200px) {
-    margin-top: 64px;
-  }
-`;
-
 const LocationContainer = styled.div`
   margin-inline: -8px;
 
