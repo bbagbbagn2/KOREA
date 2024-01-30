@@ -9,12 +9,12 @@ type TitleProps = {
 export default function Title({ titleProps, marginTop }: TitleProps) {
   return (
     <div className="title">
-      <Heading marginTop={marginTop}>{titleProps}</Heading>
+      <TitleHeading marginTop={marginTop}>{titleProps}</TitleHeading>
     </div>
   );
 }
 
-const Heading = styled.h1<{ marginTop?: string }>`
+const TitleHeading = styled.h1<{ marginTop?: string }>`
   margin-top: 56px;
   margin-bottom: 0;
   text-align: center;

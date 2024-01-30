@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FormContainer from '@components/form/MainForm';
+import Main from '@components/ui/Main';
 import Button from '@components/ui/Button';
 
 import campaign from '@assets/images/campaign.jpg';
 
 export default function CampaingnSection() {
   return (
-    <FormContainer>
+    <Main>
       <div className="cmp-container">
         <CampaignContainer>
           <CampaignBox>
@@ -29,7 +29,7 @@ export default function CampaingnSection() {
           </CampaignBox>
         </CampaignContainer>
       </div>
-    </FormContainer>
+    </Main>
   );
 }
 

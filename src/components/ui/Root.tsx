@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-type RootContainerProps = {
+type RootProps = {
   children: ReactNode;
 };
 
-export default function Root({ children }: RootContainerProps) {
+export default function Root({ children }: RootProps) {
   return <RootContainer>{children}</RootContainer>;
 }
 

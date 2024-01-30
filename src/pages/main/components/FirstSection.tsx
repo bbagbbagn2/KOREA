@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import FormContainer from '@components/form/MainForm';
+import Main from '@components/ui/Main';
 
 export default function FirstSection() {
   return (
-    <FormContainer>
+    <Main>
       <div></div>
-    </FormContainer>
+    </Main>
   );
 }

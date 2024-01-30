@@ -1,15 +1,15 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-type FormContainerProps = {
+type MainProps = {
   children: ReactNode;
 };
 
-export default function FormContainer({ children }: FormContainerProps) {
-  return <Container>{children}</Container>;
+export default function Main({ children }: MainProps) {
+  return <MainContainer>{children}</MainContainer>;
 }
 
-const Container = styled.main`
+const MainContainer = styled.main`
   margin-inline: 24px;
   width: auto;
   max-width: none;

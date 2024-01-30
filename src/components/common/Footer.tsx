@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SeperatorProps from '../Seperator';
+import SeperatorProps from '../ui/Seperator';
 export default function Footer() {
   return (
     <footer>
