@@ -3,17 +3,22 @@ import styled from 'styled-components';
 
 import useImageFadeIn from '@hooks/useImageFadeIn';
 
-import desktop from '@assets/images/sustainability/sustainability-desktop.png';
+import desktop from '@assets/images/sustainability/teaser-desktop.png';
 
-export default function BannerSectionComponent() {
+export default function WallpaperSectionComponent() {
   const imageOpacity = useImageFadeIn();
 
   return (
-    <TeaserHeroBox>
-      <TeaserContainer>
-        <ContentBox>
-          <h1>SUSTAINABILITY</h1>
-        </ContentBox>
+    <TeaserContainer>
+      <TeaserBox>
+        <ContentContainer>
+          <ContentBox>
+            <p>
+              꾸준한 노력은 지속적인 변화를 가져옵니다. 자신을 향한 믿음과
+              자부심, 그것이 금연의 가장 큰 원동력입니다.
+            </p>
+          </ContentBox>
+        </ContentContainer>
         <ImageContainer>
           <div>
             <picture>
@@ -29,31 +34,44 @@ export default function BannerSectionComponent() {
             </picture>
           </div>
         </ImageContainer>
-      </TeaserContainer>
-    </TeaserHeroBox>
+      </TeaserBox>
+    </TeaserContainer>
   );
 }
 
-const TeaserHeroBox = styled.div`
-  position: relative;
-`;
-
-
 const TeaserContainer = styled.div`
-  margin: 0 auto;
-  position: relative;
-  height: 100%;
+  margin-left: 24px;
+  margin-top: 24px;
+  padding: 0 24px;
+  width: min(100vw - 16px, 1440px);
 
-  @media only screen and (min-width: 1200px) and (min-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
+    background: none;
+    margin-top: 32px;
     margin-left: calc((1120px - min(100vw - 16px, 1440px)) / 2);
-    width: min(100vw - 16px, 1440px);
-    max-width: unset;
   }
 `;
 
-const ContentBox = styled.div`
+const TeaserBox = styled.div`
+  margin: 0 auto;
+  position: relative;
+  max-width: 551px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 16px;
+  overflow: hidden;
+
+  @media only screen and (min-width: 1200px) {
+    width: 100%;
+    max-width: 1280px;
+  }
+`;
+
+const ContentContainer = styled.div`
   padding: 24px 0 0;
   position: absolute;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -62,23 +80,27 @@ const ContentBox = styled.div`
   text-align: center;
   z-index: 1;
 
-  h1 {
-    margin-bottom: 12px;
-  }
-
   @media only screen and (min-width: 1200px) {
-    margin: 0 calc(50% - 560px);
+    padding: 0;
+    margin: 0 auto;
     width: 1120px;
-    align-items: center;
-    -webkit-box-align: center;
+    padding-top: 24px;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -webkit-box-align: start;
 
-    > * {
+    * {
       width: 50%;
     }
+  }
+`;
 
-    h1 {
-      margin-bottom: 16px;
-    }
+const ContentBox = styled.div`
+  margin-bottom: 12px;
+
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: 16px;
+    text-align: start;
   }
 `;
 
