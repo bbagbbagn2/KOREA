@@ -18,7 +18,7 @@ export default function LocationSection() {
   return (
     <Main>
       <div>
-        <Title titleProps="브랜드 살펴보기" marginTop='64px' />
+        <Title titleProps="브랜드 살펴보기" marginTop="64px" />
         <LocationContainer>
           <LocationBox>
             {brandData.slice(0, 6).map((brand: Brand, index: number) => (

@@ -5,7 +5,6 @@ import Main from 'pages/main/Main';
 import Brands from 'pages/brands/Brands';
 import Sustainability from 'pages/sustainability/Sustainability';
 
-
 function App() {
   return (
     <Routes>

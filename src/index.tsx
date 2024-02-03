@@ -92,32 +92,32 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @media only screen and (min-width: 1200px) {
-      ul {
-        font-size: 16px;
-        line-height: 26px;
-      }
-      
-      a {
-        font-size: 16px;
-        line-height: 26px;
-      }
-
-      h1 {
-        font-size: 38px;
-        line-height: 48px;
-      }
-
-      h3 {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
-      p {
-        margin-bottom: 14px;
-    font-size: 16px;
-    line-height: 26px;
-  }
+    ul {
+      font-size: 16px;
+      line-height: 26px;
     }
+    
+    a {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    h1 {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
 `;
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);

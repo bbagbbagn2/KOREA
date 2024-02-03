@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Header from '@components/common/Header';
 import Footer from '@components/common/Footer';
+
 import Root from '@components/ui/Root';
 import Main from '@components/ui/Main';
 import LocationItemComponent from '@components/ui/BrandsItemComponent';

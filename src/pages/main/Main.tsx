@@ -5,6 +5,7 @@ import CampaingnSection from './components/CampaignSection';
 import LocationSection from './components/LocationSection';
 
 import Root from '@components/ui/Root';
+
 import Header from '@components/common/Header';
 import Footer from '@components/common/Footer';
 

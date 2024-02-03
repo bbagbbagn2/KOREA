@@ -1,10 +1,12 @@
 import React from 'react';
 
+import BannerSectionComponent from './component/BannerSection';
+
 import Root from '@components/ui/Root';
 import Main from '@components/ui/Main';
+
 import Header from '@components/common/Header';
 import Footer from '@components/common/Footer';
-import BannerSectionComponent from './component/BannerSection';
 
 export default function Sustainability() {
   return (

@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ContainerComponent from '@components/ui/CampaignContainer';
-
 import Main from '@components/ui/Main';
-import Button from '@components/ui/Button';
+import ContainerComponent from '@components/ui/CampaignContainer';
 
 import main1 from '@assets/images/main/Campaign Main1.png';
 import main2 from '@assets/images/main/Campaign Main2.png';
