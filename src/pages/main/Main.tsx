@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FirstSection from './components/FirstSection';
-import CampaingnSection from './components/CampaignSection';
+import CampaingnSection from './components/campaign/CampaignSection';
 import LocationSection from './components/LocationSection';
 
 import Root from '@components/ui/Root';

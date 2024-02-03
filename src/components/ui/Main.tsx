@@ -14,6 +14,7 @@ const MainContainer = styled.main`
   width: auto;
   max-width: none;
   flex-grow: 1;
+  -webkit-box-flex: 1;
 
   @media only screen and (min-width: 1200px) {
     margin-inline: auto;
