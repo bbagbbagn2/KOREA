@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 // Custom Hook 정의
-const useImageFadeIn = (initialOpacity = 0, fadeInTime = 400) => {
+const useImageFadeIn = (initialOpacity = 0, fadeInTime = 200) => {
   const [imageOpacity, setImageOpacity] = useState(initialOpacity);
 
   useEffect(() => {
