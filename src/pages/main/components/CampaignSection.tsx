@@ -1,64 +1,45 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
-import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+import ContainerComponent from '@components/ui/CampaignContainer';
+
+import Main from '@components/ui/Main';
 import Button from '@components/ui/Button';
 
-type CampaignContainerComponent = {
-  title: string;
-  content: string;
-  buttonText: string;
-  buttonLink: string;
-  reverseLayout?: boolean;
-  rightLayout?: boolean;
-  imageSrc: string;
-  imageAlt: string;
-};
+import main1 from '@assets/images/main/Campaign Main1.png';
+import main2 from '@assets/images/main/Campaign Main2.png';
 
-export default function ContainerComponent({
-  title,
-  content,
-  buttonText,
-  buttonLink,
-  reverseLayout,
-  rightLayout,
-  imageSrc,
-  imageAlt,
-}: CampaignContainerComponent) {
+export default function CampaingnSection() {
   return (
-    <CampaignContainer>
-      <CampaignBox reverseLayout={reverseLayout}>
-        <ContentBox>
-          <h3>{title}</h3>
-          <p>{content}</p>
-          <ButtonBox>
-            <Button href={buttonLink} buttonText={buttonText} />
-          </ButtonBox>
-        </ContentBox>
-        <ImageBox rightLayout={rightLayout}>
-          <div>
-            <picture>
-              <img src={imageSrc} alt={imageAlt} />
-            </picture>
-          </div>
-        </ImageBox>
-      </CampaignBox>
-    </CampaignContainer>
+    <Main>
+      <div className="cmp-container">
+        <ContainerComponent
+          title="지속 가능한 금연을 위한 노력"
+          content="금연은 우리의 미래를 위한 지속 가능한 선택입니다. 우리는 더 나은
+                세계를 위해 모두가 함께 노력하는 공동체의 일원이며, 금연은 그
+                노력의 일환입니다. 전 세계의 많은 사람들이 담배에서 벗어나고,
+                우리의 삶과 지역사회, 심지어는 지구 전체에 긍정적인 변화를
+                이끌어내기 위해 힘쓰고 있습니다."
+          buttonLink="/sustainability"
+          buttonText="자세히 보기"
+          imageSrc={main1}
+          imageAlt="클라우드 보기"
+        />
+        <ContainerComponent
+          title="금연을 위한 건강한 여정"
+          content="건강한 새로운 삶의 시작, 금연의 놀라운 여정을 함께 살펴봐요. 건강한 
+                미래에 한 걸음 더 나아가세요."
+          buttonLink="/"
+          buttonText="자세히 보기"
+          imageSrc={main2}
+          imageAlt="클라우드 보기"
+          reverseLayout
+          rightLayout
+        />
+      </div>
+    </Main>
   );
 }
-
-ContainerComponent.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonLink: PropTypes.string.isRequired,
-  reverseLayout: PropTypes.bool,
-  imageSrc: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string.isRequired,
-};
-
-ContainerComponent.defaultProps = {
-  reverseLayout: false,
-};
 
 const CampaignContainer = styled.div`
   margin-top: 56px;
@@ -70,7 +51,7 @@ const CampaignContainer = styled.div`
   }
 `;
 
-const CampaignBox = styled.div<{ reverseLayout?: boolean }>`
+const CampaignBox = styled.div`
   margin: 0;
   margin-inline: -8px;
   display: flex;
@@ -85,13 +66,6 @@ const CampaignBox = styled.div<{ reverseLayout?: boolean }>`
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-box-align: start;
-
-    ${({ reverseLayout }) =>
-      reverseLayout &&
-      css`
-        flex-direction: row-reverse;
-        -webkit-box-direction: reverse;
-      `}
   }
 `;
 
@@ -150,7 +124,7 @@ const ButtonBox = styled.div`
   }
 `;
 
-const ImageBox = styled.div<{ rightLayout?: boolean }>`
+const ImageBox = styled.div`
   flex: 0 0 100%;
   flex-grow: 1;
   margin-left: 24px;
@@ -182,13 +156,6 @@ const ImageBox = styled.div<{ rightLayout?: boolean }>`
     right: 8.33333%;
     min-width: 58.33333%;
     flex: 0 0 58.33333%;
-    -webkit-box-flex: 0;
-
-    ${({ rightLayout }) =>
-      rightLayout &&
-      css`
-        left: 8.33333%;
-      `}
 
     picture {
       border-radius: 16px;

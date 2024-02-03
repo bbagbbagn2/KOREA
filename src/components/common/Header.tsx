@@ -5,6 +5,7 @@ import styled from 'styled-components';
 export default function Header() {
   const location = useLocation();
   const isBrandsPage = location.pathname === '/brands';
+  const isSustainabilityPage = location.pathname === '/sustainability';
 
   return (
     <header>
@@ -22,6 +23,17 @@ export default function Header() {
                       className={isBrandsPage ? 'active-element' : ''}
                     >
                       Brands
+                    </a>
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    <a
+                      href="/sustainability"
+                      role="button"
+                      className={isSustainabilityPage ? 'active-element' : ''}
+                    >
+                      Sustainability
                     </a>
                   </b>
                 </li>

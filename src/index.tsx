@@ -88,7 +88,7 @@ const GlobalStyle = createGlobalStyle`
   img {
     width: 100%;
     height: auto;
-    aspect-ratio: auto 1280 / 1024;
+    border-style: none;
   }
 
   @media only screen and (min-width: 1200px) {
