@@ -13,7 +13,7 @@ export default function Header() {
         <CmpContainer className="cmp-container">
           <LogoBox></LogoBox>
           <NavBox>
-            <CmpContainer className="cmp-container">
+            <div className="cmp-container">
               <TextList>
                 <li>
                   <b>
@@ -38,7 +38,7 @@ export default function Header() {
                   </b>
                 </li>
               </TextList>
-            </CmpContainer>
+            </div>
           </NavBox>
         </CmpContainer>
       </HeaderBox>
@@ -106,6 +106,10 @@ const NavBox = styled.div`
     }
   }
 
+  @media only screen and (max-width: 1199px) {
+    display: none;
+  }
+
   @media only screen and (min-width: 1200px) {
     margin-inline-start: 24px;
   }
@@ -126,8 +130,7 @@ const TextList = styled.ul`
       height: 100%;
       display: flex;
       align-items: center;
-      color: #000;
-      letter-spacing: 0;
+      font-weight: 600;
       text-decoration: none;
 
       a {
@@ -135,13 +138,15 @@ const TextList = styled.ul`
         height: 100%;
         display: flex;
         align-items: center;
-        color: #000;
-        letter-spacing: 0;
+        font-weight: 600;
         text-decoration: none;
-        cursor: pointer;
 
-        &.active-element::before {
-          display: block;
+        &.active-element {
+          font-weight: 700;
+
+          &::before {
+            display: block;
+          }
         }
       }
     }

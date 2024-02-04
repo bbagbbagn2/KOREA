@@ -1,8 +1,8 @@
 import React from 'react';
 
-import BannerSectionComponent from './component/BannerSection';
-import WallpaperSectionComponent from './component/WallpaperSection';
-import QuitMethodSection from './component/QuitMethodSection';
+import BannerSectionComponent from './components/BannerSection';
+import WallpaperSectionComponent from './components/WallpaperSection';
+import QuitMethodSection from './components/QuitMethodSection';
 
 import Root from '@components/ui/Root';
 import Main from '@components/ui/Main';
@@ -28,7 +28,11 @@ export default function Sustainability() {
               심지어는 지구 전체에 긍정적인 변화를 이끌어내기 위해 힘쓰고 있습니다."
           />
           <WallpaperSectionComponent />
-          <Title marginTop="120px" fontSize='32px' titleProps="금연을 성공하는 방법" />
+          <Title
+            marginTop="120px"
+            fontSize="32px"
+            titleProps="금연을 성공하는 방법"
+          />
           <QuitMethodSection />
         </div>
       </Main>
