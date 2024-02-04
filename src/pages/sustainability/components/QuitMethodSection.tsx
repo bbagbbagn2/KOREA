@@ -14,7 +14,7 @@ export default function QuitMethodSection() {
     <div>
       <Container>
         <TeaserContentBox>
-          <a href="#">
+          <a href="/sustainability/self-diagnosis">
             <TeaserBox>
               <ContentBox>
                 <h3>자가진단 하기</h3>
