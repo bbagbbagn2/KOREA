@@ -3,7 +3,9 @@ import styled from 'styled-components';
 
 import useImageFadeIn from '@hooks/useImageFadeIn';
 
-import desktop from '@assets/images/sustainability/sustainability-desktop.png';
+import desktop from '@assets/images/sustainability/self-desktop.png';
+
+import { BsArrowRight } from 'react-icons/bs';
 
 export default function QuitMethodSection() {
   const imageOpacity = useImageFadeIn();
@@ -22,6 +24,12 @@ export default function QuitMethodSection() {
                     유용한 도구입니다.
                   </p>
                 </DescriptionBox>
+                <LinkBox>
+                  <LinkText className="cmp-teaser__action-link">
+                    자세히 보기&nbsp;&nbsp;&nbsp;
+                    <BsArrowRight size="24" />
+                  </LinkText>
+                </LinkBox>
               </ContentBox>
               <ImageBox>
                 <div>
@@ -49,6 +57,12 @@ export default function QuitMethodSection() {
                 <DescriptionBox>
                   <p>내용</p>
                 </DescriptionBox>
+                <LinkBox>
+                  <LinkText>
+                    자세히 보기&nbsp;&nbsp;&nbsp;
+                    <BsArrowRight size="24" />
+                  </LinkText>
+                </LinkBox>
               </ContentBox>
               <ImageBox>
                 <div>
@@ -76,6 +90,12 @@ export default function QuitMethodSection() {
                 <DescriptionBox>
                   <p>내용</p>
                 </DescriptionBox>
+                <LinkBox>
+                  <LinkText>
+                    자세히 보기&nbsp;&nbsp;&nbsp;
+                    <BsArrowRight size="24" />
+                  </LinkText>
+                </LinkBox>
               </ContentBox>
               <ImageBox>
                 <div>
@@ -110,6 +130,12 @@ const Container = styled.div`
     min-width: 100%;
     padding-inline: 8px;
   }
+
+  :hover .cmp-teaser__action-link {
+    border-color: #6e6e6e;
+    color: #6e6e6e;
+  }
+
   @media only screen and (min-width: 1200px) {
     margin-inline: -16px;
 
@@ -178,6 +204,29 @@ const DescriptionBox = styled.div`
     p {
       margin-bottom: 24px;
     }
+  }
+`;
+
+const LinkBox = styled.div`
+  margin-top: auto;
+`;
+
+const LinkText = styled.p`
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 48px;
+  color: #000;
+  display: inline-flex;
+  font-weight: 700;
+  height: 24px;
+  margin-bottom: 0;
+  padding: 0;
+  text-decoration: none;
+  width: auto;
+
+  @media only screen and (min-width: 1200px) {
+    margin-bottom: 0;
   }
 `;
 
