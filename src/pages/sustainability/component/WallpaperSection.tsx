@@ -9,14 +9,16 @@ export default function WallpaperSectionComponent() {
   const imageOpacity = useImageFadeIn();
 
   return (
-    <TeaserContainer>
+    <Wrapper>
       <TeaserBox>
         <ContentContainer>
           <ContentBox>
-            <p>
-              꾸준한 노력은 지속적인 변화를 가져옵니다. 자신을 향한 믿음과
-              자부심, 그것이 금연의 가장 큰 원동력입니다.
-            </p>
+            <b>
+              <p>
+                꾸준한 노력은 지속적인 변화를 가져옵니다. 자신을 향한 믿음과
+                자부심, 그것이 가장 큰 원동력입니다.
+              </p>
+            </b>
           </ContentBox>
         </ContentContainer>
         <ImageContainer>
@@ -35,11 +37,11 @@ export default function WallpaperSectionComponent() {
           </div>
         </ImageContainer>
       </TeaserBox>
-    </TeaserContainer>
+    </Wrapper>
   );
 }
 
-const TeaserContainer = styled.div`
+const Wrapper = styled.div`
   margin-left: 24px;
   margin-top: 24px;
   padding: 0 24px;

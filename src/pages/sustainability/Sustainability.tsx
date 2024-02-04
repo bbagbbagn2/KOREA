@@ -2,6 +2,7 @@ import React from 'react';
 
 import BannerSectionComponent from './component/BannerSection';
 import WallpaperSectionComponent from './component/WallpaperSection';
+import QuitMethodSection from './component/QuitMethodSection';
 
 import Root from '@components/ui/Root';
 import Main from '@components/ui/Main';
@@ -28,7 +29,7 @@ export default function Sustainability() {
           />
           <WallpaperSectionComponent />
           <Title marginTop="120px" fontSize='32px' titleProps="금연을 성공하는 방법" />
-
+          <QuitMethodSection />
         </div>
       </Main>
       <Footer />
